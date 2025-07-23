@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic Search</title>
+  <style>
+    form {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <form id="searchForm" target="_blank">
+    <fieldset>
+      <legend>Practice Question</legend>
+      <div>
+        <label for="searchType">Search Type</label>
+        <select id="searchType">
+          <option value="" disabled selected>Choose a platform</option>
+          <option value="google">Google</option>
+          <option value="youtube">YouTube</option>
+          <option value="spotify">Spotify</option>
+        </select>
+
+        <input id="searchInput" type="text" placeholder="Enter anything to search" required />
+        <button style="cursor: pointer;" type="submit">Search</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <script>
+    const form = document.getElementById('searchForm');
+    const searchType = document.getElementById('searchType');
+    const searchInput = document.getElementById('searchInput');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // prevent default for now
+
+      const query = encodeURIComponent(searchInput.value.trim());
+      const type = searchType.value;
+
+      let actionURL = '';
+
+      if (!type || !query) return; // handle empty values
+
+      switch (type) {
+        case 'google':
+          actionURL = `https://www.google.com/search?q=${query}`;
+          break;
+        case 'youtube':
+          actionURL = `https://www.youtube.com/results?search_query=${query}`;
+          break;
+        case 'spotify':
+          actionURL = `https://open.spotify.com/search/${query}`;
+          break;
+        default:
+          return;
+      }
+
+      // Redirect manually since action is dynamic
+      window.open(actionURL, '_blank');
+    });
+  </script>
+</body>
+</html>

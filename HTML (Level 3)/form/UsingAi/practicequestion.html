@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #e5e0d8;
+        margin: 0;
+      }
+
+      .dev {
+        border: 1px solid #748873;
+        margin-top: 10px;
+        width: 70%;
+        text-align: center;
+        padding: 10px;
+        height: 350px;
+        background-color: #f9f6f1;
+      }
+
+      .section {
+        display: flex;
+        justify-content: center;
+      }
+
+      form {
+        display: inline-block;
+      }
+
+      .container {
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+
+      legend {
+        border: 1px solid #748873;
+        color: #3d3d3d;
+        background-color: #e3ede3;
+        padding: 4px 10px;
+        border-radius: 4px;
+      }
+
+      input::placeholder {
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form action="https://www.google.com/search" target="_self">
+        <fieldset>
+          <legend>PROJECT</legend>
+          <div>
+            <label for="searchType">Searchtype</label>
+            <select name="select" id="searchType" style="cursor: pointer;">
+              <option value="" disabled selected>Choose</option>
+              <option value="Google">Google</option>
+              <option value="Youtube" disabled style="color: #999;">
+                Youtube (Coming Soon)
+              </option>
+              <option value="Spotify" disabled style="color: #999;">
+                Spotify (Coming Soon)
+              </option>
+            </select>
+
+            <input
+              style="background-color: #748873; color: whitesmoke"
+              type="text"
+              placeholder="Enter anything to search"
+              name="q"
+              required
+            />
+            <button
+              style="cursor: pointer; background-color: #748873; color: white; border: none; padding: 4px 10px; border-radius: 3px;"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+          <div>
+            <p style="color: red; font-style: italic; margin-top: 8px;">
+              This only works for Google for now. Others are disabled until I
+              add JavaScript.
+            </p>
+            <p style="font-size: 0.8rem; color: #7a7a7a; font-style: italic;">
+              Only Google search is available. You can't select other options
+              yet.
+            </p>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+
+    <div class="section">
+      <div class="dev">
+        <p style="color: #7c444f; font-style: italic">
+          Everything you search for now opens in another tab. But I will
+          improve this project so that whatever you search will display right
+          here in this div container.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

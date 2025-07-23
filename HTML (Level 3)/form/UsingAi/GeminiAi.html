@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Aligned Form</title>
+    <style>
+        /* Basic reset for better consistency */
+        body {
+            margin: 0;
+            padding: 20px; /* Add some padding around the body content */
+            font-family: sans-serif; /* Just for readability */
+        }
+
+        form {
+            width: 75%; /* The form itself will take 75% of its parent's width (body) */
+            margin: 0 auto; /* This will center the form on the page */
+            border: 1px solid #ccc; /* Optional: A light border to visualize the form's boundaries */
+            padding: 20px;
+            box-sizing: border-box; /* Ensures padding/border are included in the 75% width */
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            padding: 0 5px;
+        }
+
+        /* Each field container (the div) will take its own line */
+        .form-group {
+            margin-bottom: 15px; /* Adds space between each field */
+            overflow: hidden; /* Clear floats if you ever use them inside */
+        }
+
+        /* Make labels display as block elements to put them on their own line above the input,
+           or give them a consistent width to align inputs */
+        label {
+            display: inline-block; /* Allows width to be set and text to wrap */
+            width: 120px; /* Adjust this width as needed for your labels */
+            text-align: right; /* Align label text to the right */
+            margin-right: 10px; /* Space between label and input */
+            vertical-align: middle; /* Aligns label vertically with input */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 140px); /* Adjust width based on label width and margin */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Include padding/border in the width */
+            vertical-align: middle; /* Aligns input vertically with label */
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Practice form</legend>
+
+            <div class="form-group">
+                <label for="firstName">FirstName</label>
+                <input type="text" placeholder="Enter your first name" id="firstName" />
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">LastName</label>
+                <input type="text" placeholder="Enter your last name" id="lastName" />
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" placeholder="Enter your email" id="email" />
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Enter your password" id="password" />
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>

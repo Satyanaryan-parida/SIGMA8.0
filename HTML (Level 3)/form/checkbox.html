@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application</title>
+    <style>
+      @font-face {
+        font-family: "myfont";
+        src: url(../../asset/font/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
+      }
+      .rootDiv {
+        display: flex;
+        justify-content: center;
+      }
+      form {
+        max-width: 552px;
+        display: inline-block;
+        padding: 10px;
+      }
+      h2 {
+        font-family: "myfont";
+        text-align: center;
+        margin: 0;
+      }
+      .mainConatiner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .namefield {
+        width: 100%;
+        display: flex;
+        gap: 5%;
+        justify-content: space-between;
+      }
+      .chekboxdiv {
+        display: flex;
+      }
+      .emailfield,
+      .passfield,
+      .firstname,
+      .lastname {
+        width: 100%;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-family: "myfont";
+      }
+
+      input[type="checkbox"] {
+        cursor: pointer;
+      }
+      legend {
+        font-family: "myfont";
+        border: 1px solid #9c9c9c;
+        border-radius: 4px;
+        padding: 2px;
+      }
+      fieldset {
+        border-radius: 10px;
+      }
+      span {
+        color: rgb(64, 137, 137);
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        font-family: "myfont";
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .checktext {
+        font-family: "myfont";
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rootDiv">
+      <form action="">
+        <fieldset>
+          <legend>Input Box Practice</legend>
+          <div class="mainConatiner">
+            <h2>Create a New Account</h2>
+            <!-- Name -->
+            <div class="namefield">
+              <div class="firstname">
+                <input type="text" placeholder="First name" required />
+              </div>
+              <div class="lastname">
+                <input type="text" placeholder="last name" required />
+              </div>
+            </div>
+
+            <!-- Emial -->
+            <div class="emailfield">
+              <input type="email" placeholder="Email" required />
+            </div>
+            <!-- Password -->
+            <div class="passfield">
+              <input type="password" placeholder="Password" required />
+            </div>
+
+            <!-- Checkbox -->
+            <div class="chekboxdiv">
+              <div>
+                <input type="checkbox" id="check" name="agree" required />
+              </div>
+              <label for="check" class="checktext"
+                >I certify that I am at least 18 years old and that I agree to
+                the <span>Terms and Policies</span> and
+                <span>Privacy policy</span>. This service is for the U.S
+                only</label
+              >
+            </div>
+
+            <button>Sign Up</button>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
