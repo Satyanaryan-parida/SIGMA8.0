@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      form{
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+      }
+      .main{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 5px;
+      }
+      fieldset{
+        display: inline-block;
+      }
+      .agreediv{
+        display: flex;
+      }
+      h1{
+        margin: 0;
+      }
+      .namediv{
+        margin-top: 10px;
+      }
+      button{
+        cursor: pointer;
+        align-self: flex-start;
+      }
+
+    </style>
+  </head>
+  <body>
+    <form action="/action">
+      <fieldset>
+        <div class="main">
+        <h1>Registration from</h1>
+        <div class="namediv">
+          <input type="text" name="fname" placeholder="Firstname" required />
+          <input type="text" name="lname" placeholder="Lastname" required />
+        </div>
+
+        <div class="genderdiv">
+          <label for="gender">Select your gender</label>
+          <select name="gender" id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="agreediv">
+          <div>
+            <input type="checkbox" id="checkbox" name="agree" required />
+          </div>
+          <label for="checkbox">Yes i agree.</label>
+        </div>
+
+        <button>Register</button>
+
+      </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
