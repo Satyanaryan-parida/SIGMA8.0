@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+mark{
+    background-color: rgb(78,205,28);
+}
+.main{
+    display: flex;
+    margin-top: 10px;
+    width: 200px;
+    height: 100px;
+    box-sizing: border-box;
+}
+.subdiv{
+    width: 50%;
+    height: 100%;
+}
+.left_div{
+        border: 1px solid;
+    align-content: center;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.right_div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+input[type="text"]{
+
+    width: 90%;
+    box-sizing: border-box;
+    align-self: center;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 1px solid black;
+
+}
+input[type="text"]:focus {
+    outline: none;
+}
+button{
+    align-self: center;
+    cursor: pointer;
+}
+pre{
+    font-family: "Handlee", cursive;
+}
+h3{
+    font-family: "Handlee", cursive;
+    text-decoration: wavy underline;
+}
