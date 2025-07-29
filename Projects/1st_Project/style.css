@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        /* Stack columns vertically */
+        gap: 20px;
+        /* Add gap between stacked columns */
+    }
+
+    .conleftdiv,
+    .conrighttdiv {
+        width: 100%;
+        /* Make them full width */
+    }
+    #leftImage{
+        width: 100%;
+    }
+}
+
+:root {
+    --momogreen: #639544;
+    --momowhite: rgb(246, 246, 246);
+    --momoyellow: rgb(244, 234, 228);
+
+}
+
+body p,
+h1,
+ul {
+    z-index: 1;
+}
+body {
+  overflow-x: hidden;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    scroll-behavior: smooth;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--momoyellow);
+}
+
+.headerdiv {
+    height: 80px;
+    overflow: hidden;
+}
+
+.headerdiv img {
+    width: 100%;
+    height: auto;
+    transform: translateY(-34%);
+}
+
+h1 {
+    font-size: 1.5rem;
+    background-color: var(--momogreen);
+    color: var(--momowhite);
+    display: inline;
+    padding: 10px 40px 10px 10px;
+    border-radius: 0 40px 40px 0;
+    position: absolute;
+    top: 51px;
+}
+
+.container {
+    margin: 0 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.conleftdiv {
+    width: 100%;
+}
+
+.conrighttdiv {
+    width: 100%;
+
+}
+
+#leftImage img {
+    width: 100%;
+}
+
+.openingdeatils {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orange;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.openingdeatils ul li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.special {
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    padding: 10px;
+}
+
+.openingdeatils h1,
+p {
+    padding: 5px;
+}
+
+.conrighttdiv ul li {
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+}
+
+.conrighttdiv {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--momowhite);
+    padding: 10px;
+}
+
+.conrighttdiv h2 {
+    padding: 5px;
+}
+
+.conrighttdiv hr {
+    width: 80%;
+    align-self: center;
+    margin-top: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--momogreen);
+    color: var(--momowhite);
+}
+
+footer hr {
+    width: 50%;
+    border: 1px solid var(--momowhite);
+    margin-bottom: 15px;
+    justify-self: center;
+}
+
+.graphic {
+    width: 150px;
+    height: 45px;
+    background-color: black;
+    border-radius: 0 40px 40px 0;
+}
+
+.graphic1 {
+    position: absolute;
+    top: 230px;
+    background-color: rgb(165, 42, 42);
+    right: 0;
+    transform: translateX(60px) rotateY(-180deg);
+}
+
+.graphic2 {
+    position: absolute;
+    top: 90%;
+    background-color: rgb(181, 165, 27);
+    transform: translateX(-40px);
+}
