@@ -1,0 +1,26 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+:root{
+    --quora-color:#9b2b27;
+}
+
+h1,h3{
+    color: var(--quora-color);
+}
+#login{
+    background-color: white;
+}
+#signup{
+    color: white;
+    background-color: var(--quora-color);
+}
+.upvote{
+    background-color: green;
+    color: white;
+}
+/* Descendant Selector*/
+.post a{
+    color: blueviolet;
+}
