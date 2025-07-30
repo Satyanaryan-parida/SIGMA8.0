@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --cyan-blue:#00809D;
+}
+
+.main-navigation{display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cyan-blue);
+    height: 60px;
+    padding: 0 5%;
+    font-family: "Inter", sans-serif;
+
+}
+#my-name{
+    color: azure;
+}
+
+.nav-item {
+    color: azure;
+    cursor: pointer;
+}
+
+.nav-list{
+    display: flex;
+    list-style-type:none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
