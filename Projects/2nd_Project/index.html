@@ -11,9 +11,9 @@
       <nav class="main-navigation">
         <span id="my-name">SONU</span>
         <ul class="nav-list">
-          <li class="nav-item">Home</li>
-          <li class="nav-item">Projects</li>
-          <li class="nav-item">Resume</li>
+          <li class="nav-item"><a href="index.html">Home</a></li>
+          <li class="nav-item"><a href="#myproject">Projects</a></li>
+          <li class="nav-item"><a href="">Resume</a></li>
         </ul>
       </nav>
     </header>
@@ -62,6 +62,56 @@
           <li>Basic C++ Programming</li>
           <li>Problem Solving & Debugging</li>
         </ul>
+      </div>
+    </section>
+
+    <section class="section3">
+      <div class="myjourney">
+        <h4>My Journey</h4>
+        <p>
+          My journey in web development started with a simple curiosity about
+          how websites are built. I began learning HTML and CSS, gradually
+          moving on to JavaScript. Each project I undertook helped me grow my
+          skills and understanding of web technologies. I am excited to continue
+          this journey, exploring new frameworks and tools to enhance my
+          capabilities.
+        </p>
+      </div>
+    </section>
+
+    <section id="myproject">
+      <h4>My Projects</h4>
+
+      <div class="project-filter-container">
+        <input type="radio" name="filter" id="all" checked />
+        <label for="all">All</label>
+
+        <input type="radio" name="filter" id="beginner" />
+        <label for="beginner">Beginner</label>
+
+        <input type="radio" name="filter" id="intermediate" />
+        <label for="intermediate">Intermediate</label>
+
+        <input type="radio" name="filter" id="advanced" />
+        <label for="advanced">Advanced</label>
+        <div class="project-list">
+          <div class="project-item beginner">
+            <h5><a href="https://satyanaryan-parida.github.io/SIGMA8.0/HTML-Level1-PartB/practice01.html" target="_blank">Project 1: 1st project i made</a></h5>
+            <p>First simple HTML and CSS project.</p>
+          </div>
+          <div class="project-item beginner">
+            <h5><a href="https://satyanaryan-parida.github.io/SIGMA8.0/Projects/1st_Project/" target="_blank">Project 2: Pani puri Hub</a></h5>
+            <p>
+              A simple project built with HTML, CSS
+            </p>
+          </div>
+          <div class="project-item intermediate">
+            <h5><a href="https://satyanaryan-parida.github.io/SIGMA8.0/Projects/2nd_Project/" target="_blank">Project 3: Portfolio Website</a></h5>
+            <p>
+              A personal portfolio website showcasing my projects and skills.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </body>

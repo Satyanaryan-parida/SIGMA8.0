@@ -25,6 +25,11 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -63,6 +68,16 @@
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: azure;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: black;
 }
 
 .hero-img {
@@ -174,4 +189,117 @@
 .section2div ul {
     list-style-type: none;
     text-align: left;
+}
+
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myjourney {
+    max-width: 775px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+}
+
+.myjourney h4 {
+    border-bottom: 2px solid var(--cyan-blue);
+    font-size: 1.5rem;
+    color: var(--cyan-blue);
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+}
+
+.myjourney p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    font-family: "Inter", sans-serif;
+}
+
+#myproject {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#myproject h4 {
+    border-bottom: 2px solid var(--cyan-blue);
+    font-size: 1.5rem;
+    color: var(--cyan-blue);
+    margin-bottom: 20px;
+    padding-bottom: 2px;
+}
+
+.project-filter-container {
+    text-align: center;
+}
+
+.project-filter-container input[type="radio"]+label {
+    align-self: center;
+}
+
+.project-filter-container input[type="radio"] {
+    display: none;
+}
+
+.project-filter-container label {
+    padding: 5px 8px;
+    background-color: var(--cyan-blue);
+    color: azure;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-filter-container label:hover {
+    background-color: #005f73;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+.project-list .project-item {
+    padding: 15px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.project-list a {
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: var(--cyan-blue);
+}
+
+.project-item {
+    display: none;
+}
+
+#all:checked~.project-list .project-item {
+    display: block;
+}
+
+#beginner:checked~.project-list .project-item.beginner {
+    display: block;
+}
+
+#intermediate:checked~.project-list .project-item.intermediate {
+    display: block;
+}
+
+#advanced:checked~.project-list .project-item.advanced {
+    display: block;
 }
