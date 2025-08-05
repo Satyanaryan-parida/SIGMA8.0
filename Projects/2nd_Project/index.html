@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -13,7 +15,7 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html">Home</a></li>
           <li class="nav-item"><a href="#myproject">Projects</a></li>
-          <li class="nav-item"><a href="">Resume</a></li>
+          <li class="nav-item"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -35,7 +37,7 @@
             <a class="button1" href="public/resume/Resume.pdf" download
               >Download Resume</a
             >
-            <a class="button2">Contact Me</a>
+            <a class="button2" href="#contact">Contact Me</a>
           </div>
         </div>
       </div>
@@ -114,5 +116,49 @@
         </div>
       </div>
     </section>
+
+    <section class="Education-experience">
+      <div class="experience">
+        <h4> EXPERIENCE / EDUCATION </h4>
+        <p>
+          📚 B.Tech in CSE – XYZ College (2022–2026) 
+        </p>
+        <p>
+          🏢 Internship: Web Developer Intern at ABC Corp 
+        </p>
+        <p>
+          💼 Hackathons, Open Source, Volunteering etc. 
+        </p>
+      </div>
+
+      <div id="contact">
+        <h4>Contact Me</h4>
+        <form action="" class="contact-form">
+          <div class="form-label">
+            <label for="email"><i class="fa-solid fa-envelope"></i></label>
+          <input type="email" placeholder="Your Email" id="email" name="email" required />
+          </div>
+
+          <div class="form-label">
+            <label for="number"><i class="fa-solid fa-phone"></i></label>
+          <input type="number" placeholder="Your Number" id="number" name="number" required />
+          </div>
+
+          <div class="form-label">
+            <i class="fa-solid fa-message-captions"></i>
+            <textarea name="message"> Message</textarea>
+          </div>
+
+          <button>Submit</button>
+        </form>
+
+
+      </div>
+
+    </section>
+
+<footer>
+    <p>&copy; 2025 Sonu | All Rights Reserved</p>
+</footer>
   </body>
 </html>

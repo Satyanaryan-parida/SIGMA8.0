@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @media (max-width:576px) {
     .hero-containt {
@@ -213,6 +215,7 @@ html {
     color: var(--cyan-blue);
     margin-bottom: 10px;
     padding-bottom: 2px;
+    font-family: "Inter", sans-serif;
 }
 
 .myjourney p {
@@ -228,6 +231,7 @@ html {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
 }
 
 #myproject h4 {
@@ -236,6 +240,7 @@ html {
     color: var(--cyan-blue);
     margin-bottom: 20px;
     padding-bottom: 2px;
+    font-family: "Inter", sans-serif;
 }
 
 .project-filter-container {
@@ -302,4 +307,84 @@ html {
 
 #advanced:checked~.project-list .project-item.advanced {
     display: block;
+}
+
+.Education-experience {
+    text-align: center;
+    padding: 20px;
+}
+
+.Education-experience h4 {
+    color: var(--cyan-blue);
+    font-size: 1rem;
+    border-bottom: 2px solid var(--cyan-blue);
+    display: inline-block;
+    padding-bottom: 2px;
+    margin-bottom: 5px;
+    font-family: "Inter", sans-serif;
+
+}
+
+#contact{
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+#contact h4{
+    margin-bottom: 10px;
+}
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-label input{
+    width: 400px;
+    padding: 10px;
+    border-radius: 4px;
+}
+.form-label input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-label{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.form-label textarea{
+    width: 400px;
+    padding: 10px;
+    border-radius: 4px;
+    resize: none;
+}
+
+#contact button {
+    background-color: var(--cyan-blue);
+    color: azure;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#contact button:hover {
+    background-color: #005f73;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--cyan-blue);
+    color: azure;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
