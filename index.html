@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Baskets</title>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .basket {
+        width: 100px;
+        height: 100px;
+        background-color: #bc7979;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 4px;
+      }
+
+      .myicon {
+        font-size: 30px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #333;
+        transition: transform 0.2s;
+      }
+
+      .myicon:hover {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🍎 Apple Basket Transfer 🍎</h1>
+    <div class="container">
+      <div class="basket basket1">
+        <span class="box1">10</span>
+      </div>
+
+      <button class="fa-solid fa-arrow-left myicon"></button>
+      <button class="fa-solid fa-arrow-right myicon"></button>
+
+      <div class="basket basket2">
+        <span class="box2">0</span>
+      </div>
+    </div>
+
+    <script>
+      const box1 = document.querySelector('.box1');
+      const box2 = document.querySelector('.box2');
+      const arrowLeft = document.querySelector('.fa-arrow-left');
+      const arrowRight = document.querySelector('.fa-arrow-right');
+
+      arrowLeft.addEventListener('click', () => {
+        let count1 = parseInt(box1.textContent);
+        let count2 = parseInt(box2.textContent);
+        if (count2 > 0) {
+          count1++;
+          count2--;
+          box1.textContent = count1;
+          box2.textContent = count2;
+        }
+      });
+
+      arrowRight.addEventListener('click', () => {
+        let count1 = parseInt(box1.textContent);
+        let count2 = parseInt(box2.textContent);
+        if (count1 > 0) {
+          count1--;
+          count2++;
+          box1.textContent = count1;
+          box2.textContent = count2;
+        }
+      });
+    </script>
+  </body>
+</html>
