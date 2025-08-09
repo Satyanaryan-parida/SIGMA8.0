@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --color2: #C85250;
+            --color3: #E7625F;
+            --color4: #F79489;
+            --color5: #F8AFA6;
+            --color6: #E29CB4;
+            --color7: #A8CEE9;
+            --color8: #900020;
+            --color9: #900020;
+            --color10: #E9EAE0;
+        }
+        body{
+            background-color: #ccc;
+        }
+        .box1 {
+            border-top-right-radius: 40px;
+            border-end-start-radius: 40px;
+            width: 200px;
+            height: 200px;
+            background-color: #18a558a4;
+            box-shadow: 20px 20px 7px -19px var(--color2),
+            20px 20px 7px -19px blueviolet inset,
+            -19px 21px 4px -20px brown inset;
+        }
+
+        .box2{
+            border: 2px solid #F7BEC0;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: var(--color10);
+            margin: 100px auto;
+            
+
+            box-shadow: 52px 52px var(--color2),
+            -52px -52px var(--color3),
+            52px -52px var(--color4),
+            -52px 52px var(--color5),
+            -120px 6px var(--color10),
+            120px 6px  var(--color10),
+            -6px -120px var(--color10),
+            -6px 120px var(--color10);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    
+</body>
+</html>
