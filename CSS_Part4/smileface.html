@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smile Face</title>
     <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
       body {
         height: 100vh;
         background: radial-gradient(#424242 0 1px, #0000 1px 10px) 0 / 1em 1em,
@@ -16,12 +21,12 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        background-color: yellow;
         position: relative;
         box-shadow: 0 2px 35px 20px rgba(255, 105, 180, 0.2) inset;
         transition: transform 1s ease, box-shadow 1s ease;
         top: 50%;
         transform: translateY(-50%);
+        z-index: 2;
       }
 
       .eyes {
@@ -61,8 +66,102 @@
         transform: translateY(-50%) scale(1.1);
       }
       .face:hover .mouth {
-        border-bottom-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        /* border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px; */
+        border-radius: 50%;
+      }
+
+      .petalcontainer {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; /* behind face */
+      }
+      .petals {
+        border: 1px solid black;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        background-color: red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: display 1 ease;
+      }
+      .petals10 {
+        position: relative; /* required for z-index to work */
+        z-index: 999; /* higher than eyes and mouth */
+      }
+      .petals:nth-child(1) {
+        transform: translate(-50%, -50%) rotate(0deg) translateY(-105px);
+      }
+      .petals:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(18deg) translateY(-105px);
+      }
+      .petals:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(54deg) translateY(-105px);
+      }
+      .petals:nth-child(4) {
+        transform: translate(-50%, -50%) rotate(72deg) translateY(-105px);
+      }
+      .petals:nth-child(5) {
+        transform: translate(-50%, -50%) rotate(90deg) translateY(-105px);
+      }
+      .petals:nth-child(6) {
+        transform: translate(-50%, -50%) rotate(108deg) translateY(-105px);
+      }
+      .petals:nth-child(7) {
+        transform: translate(-50%, -50%) rotate(126deg) translateY(-105px);
+      }
+      .petals:nth-child(8) {
+        transform: translate(-50%, -50%) rotate(144deg) translateY(-105px);
+      }
+      .petals:nth-child(9) {
+        transform: translate(-50%, -50%) rotate(162deg) translateY(-105px);
+      }
+      .petals:nth-child(11) {
+        transform: translate(-50%, -50%) rotate(180deg) translateY(-105px);
+      }
+      .petals:nth-child(12) {
+        transform: translate(-50%, -50%) rotate(198deg) translateY(-105px);
+      }
+      .petals:nth-child(13) {
+        transform: translate(-50%, -50%) rotate(216deg) translateY(-105px);
+      }
+      .petals:nth-child(14) {
+        transform: translate(-50%, -50%) rotate(234deg) translateY(-105px);
+      }
+      .petals:nth-child(15) {
+        transform: translate(-50%, -50%) rotate(252deg) translateY(-105px);
+      }
+      .petals:nth-child(16) {
+        transform: translate(-50%, -50%) rotate(270deg) translateY(-105px);
+      }
+      .petals:nth-child(17) {
+        transform: translate(-50%, -50%) rotate(288deg) translateY(-105px);
+      }
+      .petals:nth-child(18) {
+        transform: translate(-50%, -50%) rotate(306deg) translateY(-105px);
+      }
+      .petals:nth-child(19) {
+        transform: translate(-50%, -50%) rotate(324deg) translateY(-105px);
+      }
+      .petals:nth-child(20) {
+        transform: translate(-50%, -50%) rotate(342deg) translateY(-105px);
+      }
+      .petals:nth-child(21) {
+        transform: translate(-50%, -50%) rotate(360deg) translateY(-105px);
+      }
+      .petals:nth-child(22) {
+        transform: translate(-50%, -50%) rotate(378deg) translateY(-105px);
+      }
+      .petals:nth-child(23) {
+        transform: translate(-50%, -50%) rotate(396deg) translateY(-105px);
       }
     </style>
   </head>
@@ -74,6 +173,33 @@
       </div>
 
       <div class="mouth"></div>
+    </div>
+    <!-- ---------------------------------------------------------------- -->
+
+    <div class="petalcontainer">
+      <div class="petals petals1"></div>
+      <div class="petals petals2"></div>
+      <div class="petals petals3"></div>
+      <div class="petals petals4"></div>
+      <div class="petals petals5"></div>
+      <div class="petals petals6"></div>
+      <div class="petals petals7"></div>
+      <div class="petals petals8"></div>
+      <div class="petals petals9"></div>
+      <div class="petals petals10" style="margin-top: 20px"></div>
+      <div class="petals petals11"></div>
+      <div class="petals petals12"></div>
+      <div class="petals petals13"></div>
+      <div class="petals petals14"></div>
+      <div class="petals petals15"></div>
+      <div class="petals petals16"></div>
+      <div class="petals petals17"></div>
+      <div class="petals petals18"></div>
+      <div class="petals petals19"></div>
+      <div class="petals petals20"></div>
+      <div class="petals petals21"></div>
+      <div class="petals petals22"></div>
+      <div class="petals petals23"></div>
     </div>
   </body>
 </html>
