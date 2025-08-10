@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Smile Face</title>
     <style>
       body {
         height: 100vh;
-        background: radial-gradient(#424242 0 1px, #0000 1px 10px) 0 / 1em 1em, linear-gradient(#EDEEEE, #E0E0E0);
-
+        background: radial-gradient(#424242 0 1px, #0000 1px 10px) 0 / 1em 1em,
+          linear-gradient(#edeeee, #e0e0e0);
       }
       .face {
         box-sizing: border-box;
@@ -18,15 +18,13 @@
         border-radius: 50%;
         background-color: yellow;
         position: relative;
-        box-shadow:0 2px 35px 20px rgba(255, 105, 180,0.2) inset;
-        transition:transform 1s ease,box-shadow 1s ease;
+        box-shadow: 0 2px 35px 20px rgba(255, 105, 180, 0.2) inset;
+        transition: transform 1s ease, box-shadow 1s ease;
         top: 50%;
         transform: translateY(-50%);
-
-
       }
 
-      .eyes{
+      .eyes {
         width: 70%;
         display: flex;
         justify-content: space-around;
@@ -34,17 +32,16 @@
         left: 50%;
         transform: translateX(-50%);
         top: 60px;
-    
       }
 
-      .eye{
+      .eye {
         width: 25px;
         height: 25px;
         background-color: black;
         border-radius: 50%;
       }
 
-      .mouth{
+      .mouth {
         width: 90px;
         height: 35px;
         border: 5px solid black;
@@ -56,21 +53,17 @@
         transform: translateX(-50%);
         top: 100px;
         transition: border-radius 1s ease;
-
       }
 
-      .face:hover{
-        box-shadow:0 2px 35px 20px hotpink inset,
-        0 2px 4px 2px inset,
-        0 2px 4px 0 rgb(133, 9, 209),
-        0 2px 35px 0 hotpink;
+      .face:hover {
+        box-shadow: 0 2px 35px 20px hotpink inset, 0 2px 4px 2px inset,
+          0 2px 4px 0 rgb(133, 9, 209), 0 2px 35px 0 hotpink;
         transform: translateY(-50%) scale(1.1);
       }
-      .face:hover .mouth{
+      .face:hover .mouth {
         border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
       }
-
     </style>
   </head>
   <body>
@@ -80,9 +73,7 @@
         <div class="eye eyeR"></div>
       </div>
 
-      <div class="mouth">
-
-      </div>
+      <div class="mouth"></div>
     </div>
   </body>
 </html>
