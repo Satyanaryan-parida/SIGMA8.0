@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Practice</title>
+    <style>
+        html,body{
+            width: 100%;
+
+        }
+        *,*::before,*::after{
+            box-sizing: inherit;
+        }
+        .Main{
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid black;
+            border-radius: 10px;
+            flex-flow: column wrap;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            font-size: 40px;
+            align-items: center;
+            /* align-content: center; */
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Main">
+        <div class="box boxA">A</div>
+        <div class="box boxB">B</div>
+        <div class="box boxC">C</div>
+        <div class="box boxD">D</div>
+        <div class="box boxE">E</div>
+        <div class="box boxF">F</div>
+        <div class="box boxG">G</div>
+        <div class="box boxH">H</div>
+        <div class="box boxI">I</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex-Box</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --color2: #c85250;
+        --color3: #e7625f;
+        --color4: #f79489;
+        --color5: #f8afa6;
+        --color6: #e29cb4;
+        --color7: #a8cee9;
+        --color8: #900020;
+        --color9: #900020;
+        --color10: #b5b89d;
+      }
+      .container {
+        padding:10px;
+        width: 80%;
+        height: 80%;
+        background-color: rgb(38, 53, 54);
+        margin: 10% auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+      }
+      .box1 {background-color: var(--color2);}
+      .box2 {background-color: var(--color3);}
+      .box3 {background-color: var(--color4);}
+      .box4 {background-color: var(--color5);}
+      .box5 {background-color: var(--color6);}
+      .box6 {background-color: var(--color7);}
+      .box7 {background-color: var(--color8);}
+      .box8 {background-color: var(--color10);}
+
+      .box {
+        /* Remove width and height, let flexbox handle it */
+        width: 50px;
+        height: 50px;
+        color: aliceblue;
+        font-size: 1rem;
+        text-align: center;
+      }
+
+      .box1{
+        align-self: flex-start;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box box1">1</div>
+      <div class="box box2">2</div>
+      <div class="box box3">3</div>
+      <div class="box box4">4</div>
+      <div class="box box5">5</div>
+      <div class="box box6">6</div>
+      <div class="box box7">7</div>
+      <div class="box box8">8</div>
+    </div>
+  </body>
+</html>
