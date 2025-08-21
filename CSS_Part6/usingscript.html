@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    :root {
+      --white: #EBECD0;
+      --green: #739552;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #222;
+    }
+    .board {
+      width: 70vmin; /* responsive square */
+      height: 70vmin;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      border: 2px solid #333;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+    .box {
+      aspect-ratio: 1 / 1;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    /* colors */
+    .light {
+      background-color: var(--white);
+    }
+    .dark {
+      background-color: var(--green);
+    }
+    /* piece images */
+    [data-piece="br"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/br.png); }
+    [data-piece="bn"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bn.png); }
+    [data-piece="bb"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bb.png); }
+    [data-piece="bq"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bq.png); }
+    [data-piece="bk"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bk.png); }
+    [data-piece="bp"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png); }
+
+    [data-piece="wr"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wr.png); }
+    [data-piece="wn"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wn.png); }
+    [data-piece="wb"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wb.png); }
+    [data-piece="wq"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wq.png); }
+    [data-piece="wk"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wk.png); }
+    [data-piece="wp"] { background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wp.png); }
+  </style>
+</head>
+<body>
+  <div class="board" id="board"></div>
+
+  <script>
+    const board = document.getElementById("board");
+
+    // initial chess setup (8x8 array)
+    const layout = [
+      ["br","bn","bb","bq","bk","bb","bn","br"],
+      ["bp","bp","bp","bp","bp","bp","bp","bp"],
+      ["","","","","","","",""],
+      ["","","","","","","",""],
+      ["","","","","","","",""],
+      ["","","","","","","",""],
+      ["wp","wp","wp","wp","wp","wp","wp","wp"],
+      ["wr","wn","wb","wq","wk","wb","wn","wr"]
+    ];
+
+    // generate board
+    for (let row = 0; row < 8; row++) {
+      for (let col = 0; col < 8; col++) {
+        const square = document.createElement("div");
+        square.classList.add("box");
+        // alternate colors
+        if ((row + col) % 2 === 0) {
+          square.classList.add("light");
+        } else {
+          square.classList.add("dark");
+        }
+        // place piece if exists
+        if (layout[row][col] !== "") {
+          square.dataset.piece = layout[row][col];
+        }
+        board.appendChild(square);
+      }
+    }
+  </script>
+</body>
+</html>

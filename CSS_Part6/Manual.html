@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        :root{
+            --white:#EBECD0;
+            --green:#739552;
+        }
+        .board{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 70vmin;
+            height: 70vmin;
+            display: grid;
+            grid-template-rows: repeat(8,1fr);
+            grid-template-columns: repeat(8,1fr);
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px 0;
+        }
+        .box{
+            aspect-ratio: 1 / 1;
+            background: center / contain no-repeat;
+        }
+        .box:nth-child(odd){
+            background-color: var(--white);
+        }
+        .box:nth-child(even){
+            background-color:var(--green);
+        }
+        .box:nth-child(16n+9),
+        .box:nth-child(16n+11),
+        .box:nth-child(16n+13),
+        .box:nth-child(16n+15){background-color: var(--green)}
+
+        .box:nth-child(16n+10),
+        .box:nth-child(16n+12),
+        .box:nth-child(16n+14),
+        .box:nth-child(16n+16){background-color: var(--white)}
+    
+
+        .box:nth-child(1){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/br.png);}
+        .box:nth-child(2){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bn.png);}
+        .box:nth-child(3){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bb.png);}
+        .box:nth-child(4){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bq.png);}
+        .box:nth-child(5){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bk.png);}
+        .box:nth-child(6){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bb.png);}
+        .box:nth-child(7){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bn.png);}
+        .box:nth-child(8){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/br.png);}
+        .box:nth-child(9){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+        .box:nth-child(10){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+        .box:nth-child(11){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+        .box:nth-child(12){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+        .box:nth-child(13){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+        .box:nth-child(14){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+        .box:nth-child(15){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+        .box:nth-child(16){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/bp.png);}
+
+        .box:nth-child(49),
+        .box:nth-child(50),
+        .box:nth-child(51),
+        .box:nth-child(52),
+        .box:nth-child(53),
+        .box:nth-child(54),
+        .box:nth-child(55),
+        .box:nth-child(56){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wp.png);}
+
+        .box:nth-child(57){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wr.png);}
+        .box:nth-child(58){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wn.png);}
+        .box:nth-child(59){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wb.png);}
+        .box:nth-child(60){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wq.png);}
+        .box:nth-child(61){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wk.png);}
+        .box:nth-child(62){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wb.png);}
+        .box:nth-child(63){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wn.png);}
+        .box:nth-child(64){background-image: url(https://assets-themes.chess.com/image/qz4f8/150/wr.png);}
+    </style>
+</head>
+<body>
+    <div class="board">
+        <div class="box white1"></div>
+        <div class="box black1"></div>
+        <div class="box white2"></div>
+        <div class="box black2"></div>
+        <div class="box white3"></div>
+        <div class="box black3"></div>
+        <div class="box white4"></div>
+        <div class="box black4"></div>
+        <div class="box white5"></div>
+        <div class="box black5"></div>
+        <div class="box white6"></div>
+        <div class="box black6"></div>
+        <div class="box white7"></div>
+        <div class="box black7"></div>
+        <div class="box white8"></div>
+        <div class="box black8"></div>
+        <div class="box white9"></div>
+        <div class="box black9"></div>
+        <div class="box white10"></div>
+        <div class="box black10"></div>
+        <div class="box white11"></div>
+        <div class="box black11"></div>
+        <div class="box white12"></div>
+        <div class="box black12"></div>
+        <div class="box white13"></div>
+        <div class="box black13"></div>
+        <div class="box white14"></div>
+        <div class="box black14"></div>
+        <div class="box white15"></div>
+        <div class="box black15"></div>
+        <div class="box white16"></div>
+        <div class="box black16"></div>
+        <div class="box white17"></div>
+        <div class="box black17"></div>
+        <div class="box white18"></div>
+        <div class="box black18"></div>
+        <div class="box white19"></div>
+        <div class="box black19"></div>
+        <div class="box white20"></div>
+        <div class="box black20"></div>
+        <div class="box white21"></div>
+        <div class="box black21"></div>
+        <div class="box white22"></div>
+        <div class="box black22"></div>
+        <div class="box white23"></div>
+        <div class="box black23"></div>
+        <div class="box white24"></div>
+        <div class="box black24"></div>
+        <div class="box white25"></div>
+        <div class="box black25"></div>
+        <div class="box white26"></div>
+        <div class="box black26"></div>
+        <div class="box white27"></div>
+        <div class="box black27"></div>
+        <div class="box white28"></div>
+        <div class="box black28"></div>
+        <div class="box white29"></div>
+        <div class="box black29"></div>
+        <div class="box white30"></div>
+        <div class="box black30"></div>
+        <div class="box white31"></div>
+        <div class="box black31"></div>
+        <div class="box white32"></div>
+        <div class="box black32"></div>
+    </div>
+
+</body>
+</html>
