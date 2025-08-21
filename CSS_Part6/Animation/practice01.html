@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+      @keyframes firstAnimation {
+        from {
+          color: red;
+          font-weight: bolder;
+          transform: scale(1); 
+        }
+        to {
+          font-weight: bolder;
+          transform: scale(4);
+        }
+      }
+      div{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      span {
+        font-family: "Handlee", cursive;
+        color: blueviolet;
+        display: block;
+        text-align: center;
+      }
+      .animation1{animation: firstAnimation 1.5s ease-in 0s infinite alternate-reverse;}
+      .animation2{animation: firstAnimation 1.5s ease-in-out 0s infinite alternate-reverse;}
+      .animation3{animation: firstAnimation 1.5s steps(5, end) 0s infinite alternate-reverse;}
+      .animation4{animation: firstAnimation 1.5s linear 0s infinite alternate-reverse;}
+    </style>
+  </head>
+  <body>
+    <div>
+      <span class="animation1">Animation</span>
+      <span class="animation2">Animation</span>
+      <span class="animation3">Animation</span>
+      <span class="animation4">Animation</span>
+    </div>
+  </body>
+</html>
