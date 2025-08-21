@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet Adopation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: content-box;
+        font-family: "Inter", sans-serif;
+      }
+      header{
+        margin-top: 4%;
+      }
+      .main {
+        max-width: 700px;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        margin-top: 40px;
+      }
+      h1 {
+        text-align: center;
+        font-weight: 600;
+      }
+      p {
+        text-align: center;
+      }
+      img {
+        border-radius: 1rem;
+        width: 100%;
+      }
+      figure {
+        padding: 1rem;
+        width: 40%;
+        border: 1px solid #ccc;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        box-shadow: 0 0 10px 0 #ccc;
+        transition: 0.3s ease;
+      }
+      figcaption {
+        text-align: justify;
+      }
+
+      @media (max-width: 450px) {
+        .main {
+          margin-top: 20px;
+          flex-direction: column;
+          gap: 2rem;
+        }
+        figure {
+          width: 80%;
+          align-self: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+      }
+      footer {
+        margin-top: 40px;
+        text-align: center;
+      }
+      button {
+        padding: 5px;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border: none;
+        background-color: rgb(80, 101, 210);
+        color: aliceblue;
+      }
+      button:active{
+        transform: scale(0.98);
+      }
+      button:focus{
+        box-shadow: 0 0 0 2px orange;
+      }
+      figure:hover{
+        transform: scale(1.02);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Find Your New Best Friend</h1>
+      <p>Give a loving home to a pet in need.</p>
+    </header>
+    <div class="main">
+      <figure class="image1">
+        <img src="./Cat.jpg" alt="Adorable white cat sitting" />
+        <h2>Luna</h2>
+        <figcaption>
+          Luna is a gentle, affectionate cat 🐾 who enjoys cozy naps 💤, playful
+          moments 🎉, and quiet cuddles 🤗. Curious yet calm 😺, she brings
+          warmth and comfort 🏡 to any home. Adopt Luna today to welcome a
+          graceful, loving companion 💕.
+        </figcaption>
+        <button>Adopt Luna</button>
+      </figure>
+
+      <figure class="image2">
+        <img src="./Dog.jpg" alt="Cute brown dog waiting for adoption" />
+        <h2>Bruno</h2>
+        <figcaption>
+          Bruno is a playful and loyal dog 🐾 who loves outdoor adventures 🌳
+          and family time 👨‍👩‍👧‍👦. With his cheerful energy ⚡ and affectionate heart
+          ❤️, Bruno is ready to be your lifelong best friend 🥰, bringing joy,
+          love, and protection 🛡️. 🐱 Luna (Cat):
+        </figcaption>
+        <button>Adopt Bruno</button>
+      </figure>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 Pet Adoption Center. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
