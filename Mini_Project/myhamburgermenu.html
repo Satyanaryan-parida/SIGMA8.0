@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        #switch {
+            display: none;
+        }
+
+        .switch-container label {
+            width: 8vmin;
+            height: 8vmin;
+            position: fixed;
+            background-color: black;
+            color: aliceblue;
+            z-index: 1000;
+            padding: 5px;
+            border: 1px solid #ccc;
+            margin: 10px;
+            text-align: center;
+            align-content: center;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .hmb-containt {
+            width: 200px;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: relative;
+            left: -100%;
+            transition: 0.3s ease;
+        }
+
+        .hmb-containt ul {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 0 10px;
+            padding-top: 60px;
+    
+            list-style-type: none;
+        }
+
+        .hmb-containt ul li {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            text-transform: capitalize;
+            font-size: 1rem;
+            border: 1px solid transparent;
+            cursor: pointer;
+        }
+
+        .hmb-containt ul li:hover {
+            border: 1px solid #ccc;
+            font-size: 1.2rem;
+        }
+
+        .switch1 {
+            display: block;
+        }
+
+        .switch2 {
+            display: none;
+        }
+
+        #switch:checked~.hmb-containt {
+            left: 0;
+        }
+
+        #switch:checked~.switch-container .switch1 {
+            display: none;
+        }
+
+        #switch:checked~.switch-container .switch2 {
+            display: block;
+        }
+
+        .switch-container label:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="switch">
+    <div class="switch-container">
+        <label for="switch" class="switch1">☰</label>
+        <label for="switch" class="switch2">✖</label>
+    </div>
+    <div class="hmb-containt">
+        <ul>
+            <li>Gallery</li>
+            <li>Shortcuts</li>
+            <li>Exhibits</li>
+            <li>Events</li>
+            <li>Store</li>
+            <li>Contact</li>
+            <li>Feedback</li>
+
+        </ul>
+    </div>
+</body>
+
+</html>

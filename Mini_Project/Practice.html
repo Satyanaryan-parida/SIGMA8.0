@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburger Menu</title>
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+</head>
+<style>
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100vh;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  body {
+    background-color: black;
+  }
+
+  label i {
+    color: aliceblue;
+  }
+
+  ul {
+    color: aliceblue;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  ul li {
+    padding: 10px;
+    list-style-type: none;
+    
+  }
+
+  li:hover {
+    box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.4);
+  }
+
+  .main {
+    max-width: 200px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.5);
+    position: relative;
+    left: -250px;
+    transition: left 0.3s ease;
+  }
+  label i{
+    cursor: pointer;
+  }
+  .icons {
+    padding: 10px;
+    position: fixed;
+     z-index: 1000;
+  }
+
+  .fa-duotone{
+    z-index: 1001;
+    position: fixed;
+    display: block;
+  }
+  .fa-solid {
+    z-index: 1001;
+    position: fixed;
+    display: none;
+  }
+
+  #switch:checked ~ .main {
+    left: 0;
+  }
+  #switch:checked ~ .icons label .fa-duotone{
+    display: none;
+  }
+  #switch:checked ~ .icons label .fa-solid{
+    display: block;
+  }
+</style>
+
+<body>
+  <input type="checkbox" id="switch">
+  <div class="icons">
+    <label for="switch"><i class="fa-duotone fa-bars"></i></label>
+    <label for="switch"><i class="fa-solid fa-xmark"></i></label>
+  </div>
+  <div class="main">
+    <ul>
+      <li>Gallery</li>
+      <li>Shortcuts</li>
+      <li>Exhibits</li>
+      <li>Events</li>
+      <li>Store</li>
+      <li>Contact</li>
+      <li>Feedback</li>
+    </ul>
+  </div>
+</body>
+
+</html>
