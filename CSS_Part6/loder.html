@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle{
+            margin: 0 auto;
+            width: 8vmin;
+            height: 8vmin;
+            border: 16px solid #ccc;
+            border-radius: 50%;
+            border-top-color: rgba(171, 29, 199, 0.815);
+            animation: loder 1s linear 0s infinite;
+            transform: rotate('95deg');
+        }
+        @keyframes loder {
+            from{
+                transform: rotateZ(0deg);
+            }
+            to{
+                transform: rotateZ(360deg);
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid assignment</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            grid-template-rows: repeat(12,1fr);
+            grid-template-columns: repeat(12,1fr);
+            aspect-ratio: 1;
+        }
+        .header{
+            grid-row-start: 1;
+            grid-column-start: 1;
+            grid-column-end: 13;
+            background-color: blueviolet;
+        }
+        .sidebar{
+            grid-row-start: 2;
+            grid-row-end: 12;
+            grid-column-start: 1;
+            grid-column-end: 5;
+            background-color: brown;
+        }
+        .navigation{
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 5;
+            grid-column-end: 9;
+            background-color: aquamarine;
+        }
+        .ads{
+            grid-row-start: 2;
+            grid-row-end: 12;
+            grid-column-start: 9;
+            grid-column-end: 13;
+            background-color: rgb(97, 109, 37);
+        }
+        .main{
+            grid-row-start: 3;
+            grid-row-end: 12;
+            grid-column-start: 5;
+            grid-column-end: 9;
+            background-color: cadetblue;
+        }
+        .footer{
+            grid-row-start: 12;
+            grid-row-end: 13;
+            grid-column-start: 1;
+            grid-column-end: 13;
+            background-color: chocolate;
+        }
+        div{
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="navigation">navigation</div>
+        <div class="ads">ads</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
