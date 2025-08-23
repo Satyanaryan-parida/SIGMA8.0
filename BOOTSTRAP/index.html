@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        div {
+            background-color: beige;
+            padding: 10px;
+        }
+
+    section {
+
+        border: 4px solid;
+        border-top-color:yellow;
+        border-bottom-color:greenyellow;
+        border-radius: 10px 100px / 120px;
+    width: 200px;
+    height: 200px;
+    background-color: brown;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: sectionanimation 4s linear infinite reverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-group {
+    animation: rotateanimation 2s linear infinite reverse; /* opposite direction */
+}
+
+@keyframes rotateanimation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes sectionanimation {
+    from {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(-360deg);
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container-sm">
+        <button class="btn btn-outline-success btn-sm">button</button>
+        <button class="btn btn-outline-danger btn-sm">button</button>
+        <button class="btn btn-primary  btn-sm">button</button>
+        <button class="btn btn-secondary btn-sm">button</button>
+        <button class="btn btn-warning btn-sm">button</button>
+        <button class="btn btn-outline-info btn-sm">button</button>
+        <button class="btn btn-outline-light btn-sm">button</button>
+        <button class="btn btn-outline-dark btn-sm">button</button>
+        <button class="btn btn-primary">Notification <span class="badge text-bg-secondary">10+</span></button>
+    </div>
+    <div class="alert alert-danger">Hello</div>
+
+    <section>
+        <div class="btn-group">
+            <button class="btn btn-primary">Button1</button>
+            <button class="btn btn-secondary">Button2</button>
+            <button class="btn btn-danger">Button3</button>
+            <button class="btn btn-dark">Button4</button>
+        </div>
+    </section>
+    <body>
+    <div class="card" style="width: 18rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR-9aG3tteo-Q52bYNg1aV5izUPWeUm7uCsQ&s" alt="">
+        <div class="card-body">
+            <h5 class="card-title">Hello</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</body>
+</body>
+
+</html>
