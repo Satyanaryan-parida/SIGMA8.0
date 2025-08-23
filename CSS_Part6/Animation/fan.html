@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fan Speed Control</title>
+</head>
+<style>
+    body {
+        background-color: black;
+    }
+    .container {
+        border: 1px solid black;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        animation: fan 10s linear infinite;
+    }
+    .blade {
+        height: 300px;
+        width: 50px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        box-shadow: 2px 3px 2px 0 rgba(255, 255, 255, 0.15);
+    }
+    .white {
+        width: 25px;
+        height: 25px;
+        background-color: aliceblue;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.45) inset;
+    }
+    .blade5 {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.15);
+    }
+    .blade1 {background-color: #FFCC99; transform: translate(-50%,-50%) rotateZ(0deg); border-top-left-radius: 100%; border-bottom-right-radius: 100%}
+    .blade2 {background-color: #FFFF88; transform: translate(-50%,-50%) rotateZ(90deg); border-top-left-radius: 100%; border-bottom-right-radius: 100%}
+    .blade3 {background-color: #FFCCCC; transform: translate(-50%,-50%) rotateZ(45deg); border-top-left-radius: 100%; border-bottom-right-radius: 100%}
+    .blade4 {background-color: #CDEB8B; transform: translate(-50%,-50%) rotateZ(-45deg); border-top-left-radius: 100%; border-bottom-right-radius: 100%}
+
+    @keyframes fan {
+        from { transform: translate(-50%,-50%) rotateZ(0deg); }
+        to { transform: translate(-50%,-50%) rotateZ(360deg); }
+    }
+
+    label {
+        color: white;
+        font-size: 1.5rem;
+    }
+    .speed-container {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="blade blade1"></div>
+        <div class="blade blade2"></div>
+        <div class="blade blade3"></div>
+        <div class="blade blade4"></div>
+        <div class="blade blade5">
+            <div class="white"></div>
+        </div>
+    </div>
+
+    <div class="speed-container">
+        <label for="speed">Speed</label><br>
+        <input type="range" min="1" max="10" value="1" step="0" id="speed" name="speed">
+        <p style="color:white;">Current speed: <span id="speedValue">1</span></p>
+    </div>
+
+    <script>
+        const fan = document.querySelector(".container");
+        const slider = document.getElementById("speed");
+        const speedValue = document.getElementById("speedValue");
+
+        slider.addEventListener("input", () => {
+            const duration = 11 - slider.value;
+            fan.style.animationDuration = duration + "s";
+            speedValue.textContent = slider.value;
+        });
+    </script>
+</body>
+</html>
