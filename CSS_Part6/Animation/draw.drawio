@@ -1,0 +1,25 @@
+<mxfile host="65bd71144e">
+    <diagram id="3c6Gxwq9AfJMY6HlTXTn" name="Page-1">
+        <mxGraphModel dx="1229" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="8" value="" style="group;shadow=1;comic=0;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry y="180" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=90;shadow=1;glass=0;fillStyle=solid;fillColor=#ffcc99;strokeColor=#36393d;comic=0;" parent="8" vertex="1">
+                    <mxGeometry y="75" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;glass=0;fillColor=#ffcccc;strokeColor=#36393d;comic=0;" parent="8" vertex="1">
+                    <mxGeometry y="75" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="rounded=0;whiteSpace=wrap;html=1;shadow=1;rotation=45;glass=0;fillColor=#ffff88;strokeColor=#36393d;comic=0;" parent="8" vertex="1">
+                    <mxGeometry y="75" width="200" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;rotation=135;shadow=1;glass=0;fillColor=#cdeb8b;strokeColor=#36393d;comic=0;" parent="8" vertex="1">
+                    <mxGeometry y="75" width="200" height="50" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
