@@ -81,10 +81,12 @@ body{
     border-radius: 50%;
     background-color: #242424;
     cursor: pointer;
+    transform: 0.3s ease;
 
 }
 .global-navbar .home-btn .home-btn-rd:hover{
-    transform: scale(1.02);
+    transform: scale(1.025);
+    background-color: rgba(194, 169, 169,0.3);
 }
 .global-navbar .home-btn .home-btn-rd svg{
     width: 24px;
