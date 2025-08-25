@@ -44,6 +44,7 @@ body{
     grid-column: 1/-1;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 /* ______Spotify logo setup______ */
 
@@ -66,6 +67,7 @@ body{
 .global-navbar .group1{
     display: flex;
     align-items: center;
+    flex: 1; 
     gap: 8px;
 }
 
@@ -198,12 +200,141 @@ body{
 }
 
 
+/* ___------______Group2___--------_____ */
+
+.global-navbar .group2{
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.global-navbar .group2 .psd-btn{
+    padding: 8px 0;
+    background-color: #121212;
+    color: #B3B3B3;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition:all 0.3s ease;
+    font-family: inherit;
+}
+.global-navbar .group2 .psd-btn:hover{
+    transform: scale(1.04);
+    color: white;
+}
+.global-navbar .group2 .psd-btn:active{
+    transform: scale(1);
+    color: #656565;
+    opacity: 0.7;
+}
+
+.global-navbar .group2 .empty{
+    width: 1px;
+    height: 25px;
+    border: 1px solid white;
+    margin: 16px;
+}
+
+.global-navbar .group2 .install-app-anchor{
+    height: 32px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    padding: 4px 16px 4px 20px;
+    text-decoration: none;
+    color: #B3B3B3;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+.global-navbar .group2 .install-app-anchor .install{
+    font-weight: 600;
+}
+.global-navbar .group2 .drop-arrow svg{
+    display: flex;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.global-navbar .group2 .install-app-anchor:hover {
+    color: white;
+    fill: white;
+    transform: scale(1.04);
+}
+.global-navbar .group2 .install-app-anchor:active{
+    transform: scale(1);
+    color: #656565;
+}
+
+
+/* ________Signup and Login button Style________ */
+.global-navbar .group2 .sign-login-btn{
+    display: flex;
+    align-items: center;
+}
+
+.global-navbar .group2 .sign-login-btn .signup{
+    border: none;
+    outline: none;
+    background-color: #121212;
+    color: #B3B3B3;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 4px 16px 4px 8px;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.global-navbar .group2 .sign-login-btn .signup span{
+    font-weight: 600;
+}
 
 
 
 
 
 
+.global-navbar .group2 .sign-login-btn .login{
+    height: 48px;
+    background-color: #fff;
+    font-family: inherit;
+    padding: 8px 32px;
+    border-radius: 1000px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: none;
+    outline: none;
+
+}
+
+
+.global-navbar .group2 .sign-login-btn .login span{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.global-navbar .group2 .sign-login-btn .login:hover{
+    background-color: #f0f0f0;
+}
+.global-navbar .group2 .sign-login-btn .login:active{
+    background-color: #c7c7c7;
+}
+.global-navbar .group2 .sign-login-btn .signup:hover{
+    transform: scale(1.04);
+    color: white;
+}
+
+.global-navbar .group2 .sign-login-btn .signup:active{
+    transform: scale(1);
+    color: #656565;
+}
 
 
 
