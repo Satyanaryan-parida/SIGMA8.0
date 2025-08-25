@@ -107,7 +107,7 @@ body{
     margin: 0 15px;
     border-radius: 500px;
     height: 48px;
-    background-color: #242424;
+    background-color: #1f1f1f;
     caret-color: white;
     caret-shape: block;
     border: 1px solid transparent;
@@ -162,6 +162,39 @@ body{
     border: none;
     padding: 0 8px;
 
+}
+.global-navbar .group1 .search-box .browse{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 30px;
+}
+.global-navbar .group1 .search-box .browse .hide{
+    width: 40px;
+    height: 30px;
+    /* background-color: #1f1f1f; */
+    background: linear-gradient(to left, #1f1f1f 20%, rgba(31, 31, 31, 0));;
+    position: absolute;
+    right: 40px;
+    pointer-events: none;
+}
+.global-navbar .group1 .search-box .browse .browse-logo svg{
+    width: 24px;
+    height: 24px;
+    fill: white;
+    background-color: #1f1f1f;
+    /* border-left: 1px solid white; */
+}
+.global-navbar .group1 .search-box .browse .browse-logo{
+    width: 40px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1f1f1f;
+    border: 1px solid transparent;
+    border-left-color: #b3b3b3;
 }
 
 
