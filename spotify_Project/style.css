@@ -125,8 +125,8 @@ body{
 
 
 .global-navbar .group1 .search-box input[type="text"]:hover{
-    box-shadow: 0 0 2px 0 rgb(194, 169, 169) inset;
-    background-color: rgba(138, 133, 133,0.4);
+    box-shadow: 0 0 2px 0 rgba(194, 169, 169,0.4) inset;
+    background-color: rgba(138, 133, 133,0.2);
 }
 .global-navbar .group1 .search-box input[type="text"]:focus{
      box-shadow: 0 0 0 2px  white;
